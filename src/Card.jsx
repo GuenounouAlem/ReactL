@@ -1,9 +1,15 @@
 import PropTypes from "prop-types";
 
 export default function Card(props) {
+
+  const remove = (e) => {
+    e.target.style.display = "none"
+  }
+
   const normalCard = (
     <div className="card">
       <img
+        onClick={(e) => remove(e)}
         className="card-image"
         src="https://picsum.photos/200/300"
         alt="card image"
