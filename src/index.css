@@ -1,4 +1,4 @@
-.card {
+/* .card {
   border: 1px solid rgb(79, 67, 67);
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(115, 98, 98, 0.396);
@@ -25,4 +25,22 @@
 .card .card-text{
   font-family: Arial, sans-serif;
   color: hsl(0, 0%, 30%);
+} */
+
+.counter-container {
+  text-align: center;
+  font-family: 'Times New Roman';
+}
+
+.counter-display {
+  font-size: 10em;
+  margin: 0;
+}
+
+.counter-button {
+  font-size: 2em;
+  background-color: hsl(188, 100%, 51%);
+  font: bold;
+  margin: 0px 5px;
+  font-family: 'Times New Roman';
 }

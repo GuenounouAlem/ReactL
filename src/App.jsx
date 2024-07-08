@@ -1,16 +1,12 @@
-import Card from "./Card";
-
+import Counter from "./Counter";
 
 
 function App() {
-  return(
+  return (
     <>
-      <Card name="Alem"></Card>
-      <Card name="G"></Card>
-      <Card isOk ="false"></Card>
-      
+      <Counter></Counter>
     </>
-  )
+  );
 }
 
 export default App;
