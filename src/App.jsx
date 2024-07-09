@@ -1,10 +1,11 @@
-import Counter from "./Counter";
+import Cars from "./Cars";
+
 
 
 function App() {
   return (
     <>
-      <Counter></Counter>
+      <Cars></Cars>
     </>
   );
 }
