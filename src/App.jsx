@@ -1,11 +1,11 @@
-import Cars from "./Cars";
+import Items from "./Items";
 
 
 
 function App() {
   return (
     <>
-      <Cars></Cars>
+      <Items></Items>
     </>
   );
 }
