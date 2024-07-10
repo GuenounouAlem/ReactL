@@ -2,12 +2,14 @@ import PropTypes from "prop-types";
 
 export default function Card(props) {
   const disap = (e) => {
-    e.target.style.display = "none"
-  }
+    e.target.style.display = "none";
+  };
   const normalCard = (
     <div className="card">
       <img
-        onClick={(e) => {disap(e)}}
+        onClick={(e) => {
+          disap(e);
+        }}
         className="card-image"
         src="https://picsum.photos/200/300"
         alt="card image"
@@ -36,7 +38,7 @@ export default function Card(props) {
     </div>
   );
 
-  return (props.isOk ? normalCard : panormalCard)
+  return props.isOk ? normalCard : panormalCard;
 }
 
 Card.propTypes = {

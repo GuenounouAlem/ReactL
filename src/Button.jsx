@@ -1,25 +1,20 @@
-import PropTypes from 'prop-types'
-import { useState } from 'react'
+import PropTypes from "prop-types";
+import { useState } from "react";
 
 export default function Button(props) {
+  const [name, setName] = useState(props.name);
 
-    const [name, setName] = useState(props.name);
+  const clicked = () => {
+    setName("atbedel");
+  };
 
-    const clicked = () => {
-        setName("atbedel")
-    }
-    
-  return (
-    <button onClick={clicked}>{name}</button>
-  )
+  return <button onClick={clicked}>{name}</button>;
 }
 
-Button.propTypes = 
-{
-    name : PropTypes.string,
-}
+Button.propTypes = {
+  name: PropTypes.string,
+};
 
-Button.defaultProps = 
-{
-     name : "Click",
-}
+Button.defaultProps = {
+  name: "Click",
+};
