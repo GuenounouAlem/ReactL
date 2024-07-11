@@ -6,7 +6,7 @@ export default function Todos() {
     const [todos, setTodos] = useState([]);
     const [ttitle, setTTitle] = useState("");
     const [ttext, setTText] = useState("");
-    // const [tchecked, setTCheck] = useState(false);
+   
 
     function addTodo() {
         const newTodo = {
@@ -30,10 +30,7 @@ export default function Todos() {
     {
         setTText(event.target.value)
     }
-    // function changeChecked (event)
-    // {
-    //     setTCheck(event.target.value)
-    // }
+ 
   return (
     <div>
         <h1>List of todos</h1>
