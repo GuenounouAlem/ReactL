@@ -1,16 +1,13 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-
-
-import Todos from './Todos.jsx';
+import Home from './Home.jsx';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Todos />}/>
+        <Route exact path="/" element={<Home />}/>
         {/* <Route path="/about" component={About} />
         <Route component={NotFound} /> */}
       </Routes>

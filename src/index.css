@@ -57,22 +57,3 @@
 
 
 
-.items-container {
-  font-family: fantasy;
-  text-align: center;
-  background-color: hsla(38, 90%, 48%, 0.69);
-  
-}
-
-.input-container {
-  font-size: 2em;
-  margin: 0;
-  background-color: rgba(9, 200, 243, 0.567);
-}
-
-.item-button {
-  font-size: 2em;
-  background-color: hsl(188, 100%, 51%);
-  font: bold;
-  margin: 0px 5px;
-}
