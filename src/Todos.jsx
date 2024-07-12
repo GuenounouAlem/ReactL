@@ -6,7 +6,7 @@ export default function Todos() {
     const [todos, setTodos] = useState([]);
     const [ttitle, setTTitle] = useState("");
     const [ttext, setTText] = useState("");
-    const [checked, setChecked] = useState(false);
+    
    
 
     function addTodo() {
@@ -31,12 +31,8 @@ export default function Todos() {
     {
         setTText(event.target.value)
     }
-    function check (event) {
-        setChecked(event.target.checked)
-    }
-    function delAll(index){
-        setTodos(todos.filter((_,i) => i != index))
-    }
+    
+    
  
   return (
     <div className="flex w-full">
@@ -47,7 +43,7 @@ export default function Todos() {
                 <div className="card bg-base-300 rounded-box grid h-32 flex-grow place-items-center">Title : {todos.title} <br />
                 {todos.text}</div>
                                                                             
-                                                                            <input className="checkbox checkbox-error" type="checkbox" onChange={() => check(index)}></input>
+                                                                            <input className="checkbox checkbox-error" type="checkbox" ></input>
                                                                             <button className="btn btn-outline btn-error" onClick={() => delTodo(index)}>Delete</button>
                                                                             <button className="btn btn-outline btn-success">Up</button>
                                                                             <button className="btn btn-outline btn-warning">Down</button>

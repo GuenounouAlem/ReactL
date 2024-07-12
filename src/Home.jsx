@@ -3,9 +3,10 @@ import Navbar from "./Navbar";
 import Todos from "./Todos";
 
 export const UserContext = createContext({
-  name : '',
+  name : 'guest',
   email : '',
   password : '',
+  isLogged : false,
 });
 
 export default function Home() {
