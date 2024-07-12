@@ -6,6 +6,7 @@ export default function Todos() {
     const [todos, setTodos] = useState([]);
     const [ttitle, setTTitle] = useState("");
     const [ttext, setTText] = useState("");
+    const [checked, setChecked] = useState(false);
    
 
     function addTodo() {
@@ -30,15 +31,27 @@ export default function Todos() {
     {
         setTText(event.target.value)
     }
+    function check (event) {
+        setChecked(event.target.checked)
+    }
  
   return (
     <div>
-        <h1>List of todos</h1>
-            <ul>
-                {todos.map((todos, index) => <li key={index} onClick={() => delTodo(index)}>Title : {todos.title} <br /> {todos.text}</li> )}
-            </ul>
-        <input onChange={changeTitle} type="text" placeholder="Title of todo" value={ttitle} /> <br />
-        <input onChange={changeText} type="text" placeholder="Text of todo" value={ttext} /> <br />
+        <h1>Todos List</h1>
+            <ol>
+                {todos.map((todos, index) =>  <li key={index}>
+                                                                            Title : {todos.title} <br />
+                                                                            {todos.text}
+                                                                            <input type="checkbox" onChange={() => check(index)}></input>
+                                                                            <button onClick={() => delTodo(index)}>Delete</button>
+                                                                            <button>Up</button>
+                                                                            <button>Down</button></li> )
+                                                                                              }
+                                             
+            </ol>
+            
+        <input onChange={changeTitle} type="text" placeholder="Title of task" value={ttitle} /> <br />
+        <input onChange={changeText} type="text" placeholder="Text of task" value={ttext} /> <br />
         <button id="addButton" onClick={addTodo}>Add</button>
 
     </div>
