@@ -1,12 +1,20 @@
+import { createContext } from "react";
 import Navbar from "./Navbar";
+import Todos from "./Todos";
 
+export const UserContext = createContext({
+  name : '',
+  email : '',
+  password : '',
+});
 
 export default function Home() {
   return (
-    
+  <UserContext.Provider value={'guest'}>
     <div>
       <Navbar></Navbar>
-      <h1>Home</h1>
+      <Todos></Todos>
     </div>
+    </UserContext.Provider>  
   )
 }

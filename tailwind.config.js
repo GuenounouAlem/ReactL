@@ -2,12 +2,18 @@
 import daisyui from "daisyui";
 
 export default {
-  content: ["./src/*.jsx"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    
   },
   plugins: [
     daisyui,
   ],
+  daisyui: {
+    themes: ["night", "dark", ], // Add the themes you want to use
+  },
 }
 

@@ -34,25 +34,33 @@ export default function Todos() {
     function check (event) {
         setChecked(event.target.checked)
     }
+    function delAll(index){
+        setTodos(todos.filter((_,i) => i != index))
+    }
  
   return (
-    <div>
-        <h1>Todos List</h1>
+    <div className="flex w-full">
+        <h1 className="font-bold text-red-700 ">Todos List</h1>
             <ol>
                 {todos.map((todos, index) =>  <li key={index}>
-                                                                            Title : {todos.title} <br />
-                                                                            {todos.text}
-                                                                            <input type="checkbox" onChange={() => check(index)}></input>
-                                                                            <button onClick={() => delTodo(index)}>Delete</button>
-                                                                            <button>Up</button>
-                                                                            <button>Down</button></li> )
+                                                   
+                <div className="card bg-base-300 rounded-box grid h-32 flex-grow place-items-center">Title : {todos.title} <br />
+                {todos.text}</div>
+                                                                            
+                                                                            <input className="checkbox checkbox-error" type="checkbox" onChange={() => check(index)}></input>
+                                                                            <button className="btn btn-outline btn-error" onClick={() => delTodo(index)}>Delete</button>
+                                                                            <button className="btn btn-outline btn-success">Up</button>
+                                                                            <button className="btn btn-outline btn-warning">Down</button>
+                                                                            </li> )
                                                                                               }
                                              
             </ol>
-            
-        <input onChange={changeTitle} type="text" placeholder="Title of task" value={ttitle} /> <br />
-        <input onChange={changeText} type="text" placeholder="Text of task" value={ttext} /> <br />
-        <button id="addButton" onClick={addTodo}>Add</button>
+            <div className="card bg-base-300 rounded-box grid h-32 flex-grow place-items-center">
+        <input className="input input-bordered input-primary w-full max-w-xs" onChange={changeTitle} type="text" placeholder="Title of task" value={ttitle} /> <br />
+        <input className="input input-bordered input-primary w-full max-w-xs" onChange={changeText} type="text" placeholder="Text of task" value={ttext} /> <br />
+        <button className="btn btn-outline btn-info" id="addButton" onClick={addTodo}>Add</button>
+        <button className="btn btn-outline btn-error" >Delete Checked</button>
+        </div>
 
     </div>
   )
